@@ -1,0 +1,16 @@
+[
+    {
+        "id": "EXAM001",
+        "name": "National Mock Assessment",
+        "status": "LIVE",
+        "totalCandidates": 1000,
+        "onlineCandidates": 982
+    },
+    {
+        "id": "EXAM002",
+        "name": "Technical Aptitude Test",
+        "status": "SCHEDULED",
+        "totalCandidates": 650,
+        "onlineCandidates": 0
+    }
+]

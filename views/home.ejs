@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <%- include("partials/navbar") %>
+    <!-- <%- include("partials/sidebar") %> -->
+
+    <h1>Resilient & Trustworthy Online Assessment</h1>
+    <p>EJS is working successfully.</p>
+
+    <h2>Available Exams</h2>
+
+    <% exams.forEach((exam) => { %>
+
+    <div>
+        <h3><%= exam.name %></h3>
+        <p>Status: <%= exam.status %></p>
+        <p>Candidates: <%= exam.totalCandidates %></p>
+    </div>
+
+    <% }) %>
+
+</body>
+</html>
