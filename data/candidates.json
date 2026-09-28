@@ -1,0 +1,47 @@
+[
+  {
+    "id": "CND002",
+    "name": "Priya Patel",
+    "examId": "EXAM001",
+    "status": "Online",
+    "progress": 82,
+    "networkStatus": "Excellent",
+    "lastSaved": "10:45:05"
+  },
+  {
+    "id": "CND003",
+    "name": "Amit Kumar",
+    "examId": "EXAM001",
+    "status": "Offline",
+    "progress": 34,
+    "networkStatus": "Poor",
+    "lastSaved": "10:31:18"
+  },
+  {
+    "id": "CND004",
+    "name": "Neha Gupta",
+    "examId": "EXAM002",
+    "status": "Online",
+    "progress": 95,
+    "networkStatus": "Good",
+    "lastSaved": "10:48:30"
+  },
+  {
+    "id": "CND005",
+    "name": "Vikram Singh",
+    "examId": "EXAM002",
+    "status": "Paused",
+    "progress": 45,
+    "networkStatus": "Average",
+    "lastSaved": "10:35:10"
+  },
+  {
+    "id": "CND006",
+    "name": "Anjali Desai",
+    "examId": "EXAM001",
+    "status": "Online",
+    "progress": 12,
+    "networkStatus": "Good",
+    "lastSaved": "10:49:02"
+  }
+]

@@ -26,21 +26,10 @@ const exams = require("./data/exams.json");
 
 
 app.get("/", (req, res) => {
+    // console.log(users);
     res.render("home", { users, exams });
 });
 
 app.listen(port, () => {
     console.log(`app listening on port: ${port}`);
 });
-
-
-
-// GET    /api/exams
-// GET    /api/candidates
-// GET    /api/incidents
-// GET    /api/system/status
-
-// POST   /api/incidents
-
-// PATCH  /api/incidents/:id
-// PATCH  /api/candidates/:id/status
