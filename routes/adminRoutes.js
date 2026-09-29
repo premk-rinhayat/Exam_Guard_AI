@@ -9,4 +9,8 @@ router.get("/monitoring", (req, res) => {
     res.render("admin/monitoring");
 });
 
+router.get("/incidents", (req, res) => {
+    res.render("admin/incidents");
+})
+
 module.exports = router;

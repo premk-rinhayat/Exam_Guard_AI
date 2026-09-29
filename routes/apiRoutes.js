@@ -3,7 +3,7 @@ const router = express.Router();
 
 const exams = require("../data/exams.json");
 const candidates = require("../data/candidates.json");
-// const incidents = require("../data/incidents.json");
+const incidents = require("../data/incidents.json");
 
 router.get("/exams", (req, res) => {
     // res.send("api routes : exam working");
@@ -14,6 +14,12 @@ router.get("/exams", (req, res) => {
 router.get("/candidates", (req, res) => {
     res.json(candidates);
 });
+
+// Gives incidents data to frontend
+router.get("/incidents", (req, res) => {
+    res.json(incidents);
+});
+
 
 module.exports = router;
 

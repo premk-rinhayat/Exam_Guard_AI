@@ -1,0 +1,47 @@
+[
+  {
+    "id": "INC001",
+    "type": "Network Failure",
+    "severity": "High",
+    "description": "Main router disconnected in testing Lab A.",
+    "affectedCandidates": 18,
+    "status": "Active",
+    "createdAt": "2026-09-29T10:15:00Z"
+  },
+  {
+    "id": "INC002",
+    "type": "Hardware Issue",
+    "severity": "Medium",
+    "description": "System froze during the reasoning section.",
+    "affectedCandidates": 1,
+    "status": "Resolved",
+    "createdAt": "2026-09-29T09:30:00Z"
+  },
+  {
+    "id": "INC003",
+    "type": "Server Timeout",
+    "severity": "Critical",
+    "description": "Database connection timeout while auto-saving answers.",
+    "affectedCandidates": 45,
+    "status": "Investigating",
+    "createdAt": "2026-09-29T10:45:00Z"
+  },
+  {
+    "id": "INC004",
+    "type": "Software Glitch",
+    "severity": "Low",
+    "description": "Webcam stream delayed by 3 seconds.",
+    "affectedCandidates": 3,
+    "status": "Active",
+    "createdAt": "2026-09-29T10:50:00Z"
+  },
+  {
+    "id": "INC005",
+    "type": "Power Outage",
+    "severity": "High",
+    "description": "UPS failed to initialize immediately in Wing C.",
+    "affectedCandidates": 12,
+    "status": "Resolved",
+    "createdAt": "2026-09-29T08:10:00Z"
+  }
+]
