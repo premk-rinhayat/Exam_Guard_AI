@@ -108,5 +108,29 @@
     "affectedCandidates": 100,
     "status": "Active",
     "id": "INC013"
+  },
+  {
+    "type": "Network Failure",
+    "severity": "High",
+    "description": "Candidate network connection lost during examination",
+    "affectedCandidates": 1,
+    "status": "Active",
+    "id": "INC014"
+  },
+  {
+    "type": "Network Failure",
+    "severity": "High",
+    "description": "Candidate network connection lost during examination",
+    "affectedCandidates": 1,
+    "status": "Active",
+    "id": "INC015"
+  },
+  {
+    "type": "Network Failure",
+    "severity": "High",
+    "description": "Candidate network connection lost during examination",
+    "affectedCandidates": 1,
+    "status": "Active",
+    "id": "INC016"
   }
 ]

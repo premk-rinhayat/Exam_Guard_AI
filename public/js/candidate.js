@@ -33,24 +33,29 @@ const networkButton = document.getElementById("simulateNetworkFailure");
 
 networkButton.addEventListener("click", () => {
 
-    document.getElementById("networkStatus").textContent = "CONNECTION LOST";
+    document.getElementById("networkStatus").textContent =
+        "CONNECTION LOST";
 
     document.getElementById("saveStatus").textContent =
         "Local Save - Waiting for connection";
-});
 
-const restoreButton = document.getElementById("restoreNetwork");
+    const incident = {
+        type: "Network Failure",
+        severity: "High",
+        description: "Candidate network connection lost during examination",
+        affectedCandidates: 1,
+        status: "Active"
+    };
 
-restoreButton.addEventListener("click", () => {
-
-    document.getElementById("networkStatus").textContent =
-        "CONNECTION RESTORED";
-
-    document.getElementById("saveStatus").textContent =
-        "Syncing...";
-
-    setTimeout(() => {
-        document.getElementById("saveStatus").textContent =
-            "Saved";
-    }, 1000);
+    fetch("/api/incidents", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(incident)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Incident created:", data);
+    });
 });

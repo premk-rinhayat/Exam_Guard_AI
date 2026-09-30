@@ -1,29 +1,37 @@
 // fetch the data from the api/candidates
-function loadCandidates() {
+function loadIncidents() {
 
-    fetch("/api/candidates")
+    fetch("/api/incidents")
         .then(response => response.json())
         .then(data => {
 
-            const table = document.getElementById("candidateTable");
+            const table = document.getElementById("incidentTable");
+
+            if (!table) return;
 
             table.innerHTML = "";
 
-            data.forEach(candidate => {
+            data.forEach(incident => {
 
                 const row = document.createElement("tr");
 
                 row.innerHTML = `
-                    <td>${candidate.id}</td>
-                    <td>${candidate.name}</td>
-                    <td>${candidate.status}</td>
-                    <td>${candidate.progress}%</td>
-                    <td>${candidate.networkStatus}</td>
+                    <td>${incident.id}</td>
+                    <td>${incident.type}</td>
+                    <td>${incident.severity}</td>
+                    <td>${incident.affectedCandidates}</td>
+                    <td>${incident.status}</td>
                 `;
 
                 table.appendChild(row);
             });
         });
+}
+
+const refreshIncidents = document.getElementById("refreshIncidents");
+
+if (refreshIncidents) {
+    refreshIncidents.addEventListener("click", loadIncidents);
 }
 
 loadCandidates();
