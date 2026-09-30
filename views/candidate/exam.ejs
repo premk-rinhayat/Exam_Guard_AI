@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Assessment</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <h1>National Mock Assessment</h1>
+
+    <div>
+        <p>Candidate: Rahul Sharma</p>
+        <p>Question: 1 of 10</p>
+        <p>Time Remaining: <span id="timer">30:00</span></p>
+        <p>Network: <span id="networkStatus">CONNECTED</span></p>
+        <button id="simulateNetworkFailure">
+    Simulate Network Failure
+</button>
+<button id="restoreNetwork">
+    Restore Connection
+</button>
+        <p>Auto-save: <span id="saveStatus">Saved</span></p>
+    </div>
+
+    <hr>
+
+    <h2>Question 1</h2>
+
+    <p>Which data structure follows the FIFO principle?</p>
+
+    <label>
+        <input type="radio" name="answer" value="Stack">
+        Stack
+    </label>
+
+    <br>
+
+    <label>
+        <input type="radio" name="answer" value="Queue">
+        Queue
+    </label>
+
+    <br>
+
+    <label>
+        <input type="radio" name="answer" value="Tree">
+        Tree
+    </label>
+
+    <br>
+
+    <label>
+        <input type="radio" name="answer" value="Graph">
+        Graph
+    </label>
+
+    <br><br>
+
+    <button>Previous</button>
+    <button>Next</button>
+    <button>Submit Exam</button>
+
+    <script src="/js/candidate.js"></script>
+
+</body>
+</html>
