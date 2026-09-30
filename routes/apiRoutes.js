@@ -5,6 +5,8 @@ const exams = require("../data/exams.json");
 const candidates = require("../data/candidates.json");
 const incidents = require("../data/incidents.json");
 
+const auditLogs = require("../data/auditLogs.json");
+
 // Interact with computer file system
 const fs = require("fs");
 
@@ -50,6 +52,19 @@ router.post("/incidents", (req, res) => {
         message: "Incident created successfully",
         incident: newIncident
     });
+});
+
+
+//
+const systemMetrics = require("../data/systemMetrics.json");
+
+router.get("/system-metrics", (req, res) => {
+    res.json(systemMetrics);
+});
+
+//
+router.get("/audit-logs", (req, res) => {
+    res.json(auditLogs);
 });
 
 

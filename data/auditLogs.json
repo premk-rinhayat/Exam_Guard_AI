@@ -1,0 +1,23 @@
+[
+  {
+    "id": "LOG001",
+    "user": "Admin User",
+    "action": "Exam Started",
+    "target": "EXAM001",
+    "timestamp": "2026-09-30 17:00:00"
+  },
+  {
+    "id": "LOG002",
+    "user": "Technical Team",
+    "action": "Network Incident Detected",
+    "target": "INC001",
+    "timestamp": "2026-09-30 17:05:12"
+  },
+  {
+    "id": "LOG003",
+    "user": "Admin User",
+    "action": "Recovery Initiated",
+    "target": "INC001",
+    "timestamp": "2026-09-30 17:06:30"
+  }
+]

@@ -1,32 +1,35 @@
 // fetch the data from the api/candidates
-const candidateTable = document.getElementById("candidateTable");
+function loadCandidates() {
 
-fetch("/api/candidates")
-    .then((response) => {
-        return response.json();
-    })
-    .then((data) => {
+    fetch("/api/candidates")
+        .then(response => response.json())
+        .then(data => {
 
-        console.log(data);
+            const table = document.getElementById("candidateTable");
 
-        data.forEach((candidate) => {
-        // 1. create a row
-        const row = document.createElement('tr');
+            table.innerHTML = "";
 
-        // 2. put candidate data inside the row
-        // Using template literals makes it easy to map object properties to columns
-        row.innerHTML = `
-            <td>${candidate.id}</td>
-            <td>${candidate.name}</td>
-            <td>${candidate.status}</td>
-            <td>${candidate.progress}</td>
-            <td>${candidate.networkStatus}</td>
-        `;
+            data.forEach(candidate => {
 
-        // 3. add row to table
-        candidateTable.appendChild(row);
+                const row = document.createElement("tr");
+
+                row.innerHTML = `
+                    <td>${candidate.id}</td>
+                    <td>${candidate.name}</td>
+                    <td>${candidate.status}</td>
+                    <td>${candidate.progress}%</td>
+                    <td>${candidate.networkStatus}</td>
+                `;
+
+                table.appendChild(row);
+            });
         });
-    });
+}
+
+loadCandidates();
+
+document.getElementById("refreshCandidates")
+    .addEventListener("click", loadCandidates);
 
 
 // fetch the data from the api/incident

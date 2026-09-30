@@ -1,0 +1,9 @@
+{
+  "cpu": 62,
+  "memory": 71,
+  "disk": 48,
+  "apiResponse": 180,
+  "databaseLatency": 42,
+  "networkLatency": 35,
+  "websocketConnections": 982
+}
