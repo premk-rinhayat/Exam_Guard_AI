@@ -58,3 +58,73 @@ fetch("/api/incidents")
         table.appendChild(row);
         });
     });
+
+// create a new incident
+function createIncident(type, severity, description, affectedCandidates) {
+
+    const newIncident = {
+        type: type,
+        severity: severity,
+        description: description,
+        affectedCandidates: affectedCandidates,
+        status: "Active"
+    };
+
+    fetch("/api/incidents", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newIncident)
+    })
+    .then((response) => {
+        return response.json();
+    })
+    .then((data) => {
+
+        console.log(data);
+
+        const incident = data.incident;
+
+        const table = document.getElementById("incidentTable");
+
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td>${incident.id}</td>
+            <td>${incident.type}</td>
+            <td>${incident.severity}</td>
+            <td>${incident.affectedCandidates}</td>
+            <td>${incident.status}</td>
+        `;
+
+        table.appendChild(row);
+    });
+}
+
+document.getElementById("simulateNetwork").addEventListener("click", () => {
+    createIncident(
+        "Network Failure",
+        "High",
+        "Simulated network connectivity failure",
+        10
+    );
+});
+
+document.getElementById("simulateServer").addEventListener("click", () => {
+    createIncident(
+        "Server Failure",
+        "Critical",
+        "Simulated server/API failure",
+        50
+    );
+});
+
+document.getElementById("simulateDatabase").addEventListener("click", () => {
+    createIncident(
+        "Database Failure",
+        "Critical",
+        "Simulated database connectivity failure",
+        100
+    );
+});

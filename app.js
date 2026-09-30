@@ -13,7 +13,7 @@ app.set("view engine", "ejs");
 
 app.use(express.static("public"));
 
-app.use(express.json());
+app.use(express.json()); // Read the json data
 
 app.use("/candidate", candidateRoutes);
 app.use("/admin", adminRoutes);

@@ -43,5 +43,70 @@
     "affectedCandidates": 12,
     "status": "Resolved",
     "createdAt": "2026-09-29T08:10:00Z"
+  },
+  {
+    "id": "INC006",
+    "type": "Network Failure",
+    "severity": "High",
+    "description": "Multiple candidates disconnected",
+    "affectedCandidates": 25,
+    "status": "Active",
+    "createdAt": "2026-09-29T10:50:00Z"
+  },
+  {
+    "type": "Network Failure",
+    "severity": "High",
+    "description": "Simulated network failure",
+    "affectedCandidates": 10,
+    "status": "Active",
+    "id": "INC007"
+  },
+  {
+    "type": "Network Failure",
+    "severity": "High",
+    "description": "Simulated network failure",
+    "affectedCandidates": 10,
+    "status": "Active",
+    "id": "INC008"
+  },
+  {
+    "type": "Network Failure",
+    "severity": "High",
+    "description": "Simulated network failure",
+    "affectedCandidates": 10,
+    "status": "Active",
+    "id": "INC009"
+  },
+  {
+    "type": "Network Failure",
+    "severity": "High",
+    "description": "Simulated network failure",
+    "affectedCandidates": 10,
+    "status": "Active",
+    "id": "INC010"
+  },
+  {
+    "type": "Network Failure",
+    "severity": "High",
+    "description": "Simulated network connectivity failure",
+    "affectedCandidates": 10,
+    "status": "Active",
+    "id": "INC011"
+  },
+  {
+    "type": "Server Failure",
+    "severity": "Critical",
+    "description": "Simulated server/API failure",
+    "affectedCandidates": 50,
+    "status": "Active",
+    "id": "INC012"
+  },
+  {
+    "type": "Database Failure",
+    "severity": "Critical",
+    "description": "Simulated database connectivity failure",
+    "affectedCandidates": 100,
+    "status": "Active",
+    "id": "INC013"
   }
 ]
